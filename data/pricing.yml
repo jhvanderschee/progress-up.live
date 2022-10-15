@@ -1,0 +1,27 @@
+---
+title: "Simple pricing for everyone"
+subtitle: >
+          Whether you're looking for a across the counter sale or
+          service we are there.
+buttonTarget: "contact"
+itemPrices:
+  - packcage: "Stove repair"
+    description: >
+             Only 150₹. Usually takes around 3 hours.
+    price: 150₹
+    badge: 
+  - packcage: "Mixer jar fixing"
+    description: >
+                Usually 5 minutes.
+    price: 50₹
+    badge: popular
+  - packcage: "Grinder service"
+    description: >
+            Around 3 hours.
+    price: 250₹
+    badge:
+  - packcage: "Fan rewinding"
+    description: >
+            Around 3 hours.
+    price: 250₹
+---
