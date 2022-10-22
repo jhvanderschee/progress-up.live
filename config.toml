@@ -1,4 +1,4 @@
-baseURL = '/'
+baseURL = 'https://progress-up.live'
 languageCode = 'en-us'
 paginate = 6
 theme= "hugo-cohub"
