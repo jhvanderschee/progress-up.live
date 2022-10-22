@@ -7,21 +7,17 @@ buttonTarget: "contact"
 itemPrices:
   - packcage: "Stove repair"
     description: >
-             Only 150₹. Usually takes around 3 hours.
-    price: 150₹
+             Personal edition
+    price: 19.99$
     badge: 
-  - packcage: "Mixer jar fixing"
+  - packcage: Personal license
     description: >
-                Usually 5 minutes.
-    price: 50₹
+                Developer edition
+    price: 49.99$
     badge: popular
-  - packcage: "Grinder service"
+  - packcage: Business license
     description: >
-            Around 3 hours.
-    price: 250₹
+            Business license
+    price: 299$
     badge:
-  - packcage: "Fan rewinding"
-    description: >
-            Around 3 hours.
-    price: 250₹
 ---

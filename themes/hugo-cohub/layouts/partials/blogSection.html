@@ -1,5 +1,5 @@
 {{with .Site.Data.blogSection}}
-<section class="blog" id="blog">
+<section class="blog" id="docs">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="row justify-content-center">
-      {{ range first 3 (where $.Site.RegularPages "Type" "blog") }}
+      {{ range first 3 (where $.Site.RegularPages "Type" "docs") }}
       <div class="col-lg-4 col-md-6">
         <article class="blog-post">
           <img src="{{ .Params.featureImage | absURL }}" alt="blog-images">
@@ -25,7 +25,8 @@
       </div>
       {{end}}
       <div class="col-12 text-center">
-        <a href="{{.buttonTarget | absURL}}" class="btn btn-primary">View blog page</a>
+        <a href="{{.buttonTarget | absURL}}" class="btn
+btn-primary">View docs page</a>
       </div>
     </div>
   </div>

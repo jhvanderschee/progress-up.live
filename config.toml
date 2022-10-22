@@ -2,62 +2,68 @@ baseURL = '/'
 languageCode = 'en-us'
 paginate = 6
 theme= "hugo-cohub"
-title = 'Sindhu gas service'
+title = 'progress-up | HTML5 multi file upload plugin with progress bar'
  
 [Menu]
   # Main Menu
   [[menu.Main]]
-  name = "Gallery"
-  url= "#gallery"
-  weight = 1
-  [[menu.Main]]
-  name = "Feature"
+  name = "Features"
   url= "#service"
   weight = 1
   [[menu.Main]]
-  name = "About"
-  url= "/about/"
+  name = "Gallery"
+  url= "#gallery"
+  weight = 2
+  [[menu.Main]]
+  name = "Live demo"
+  url= "/demo/"
   weight = 3
   [[menu.Main]]
-  name = "Blog"
-  url= "#blog"
+  name = "Docs"
+  url= "#docs"
   weight = 4
+  #[[menu.Main]]
+  #name = "Pricing"
+  #url= "#pricing"
+  #weight = 5
   [[menu.Main]]
-  name = "Pricing"
-  url= "#pricing"
+  name = "React"
+  url= "/react"
   weight = 5
+  [[menu.Main]]
+  name = "Vue"
+  url= "/vue"
+  weight = 6
+  [[menu.Main]]
+  name = "Angular"
+  url= "/angular"
+  weight = 7
   [[menu.Main]]
   name = "FAQ"
   url= "#faq"
-  weight = 6
+  weight = 8
   [[menu.Main]]
   name = "Contact"
   url= "/contact/"
-  weight = 7
+  weight = 9
 
 [params]
   aboutPageURL = "blog"
   contactLink = "contact"
-  copyright = "© {year} <a href=\"https://sindhugas.homes/\" target=\"_blank\">Sindhu Gas service</a>"
-  fabFormURL =  "https://fabform.io/f/u00kv3-"
-  googleAnalytics = "G-JZ95FEWF9K"
+  copyright = "© {year} <a href=\"https://progress-up.live/\" target=\"_blank\">Progress-up Plugin</a>"
   logo = "images/logo.png"
   footerlogo = "images/logo.png"
-  footerDescription = "Sindhu gas, mixer,grinder service and switchboard cutting"
+  footerDescription = "A HTML5 file upload plugin with progress bar"
 
   [params.address]
-  address = "262, Sri Shanmuga Mahal,<br/> V.M.Chatram, Tirunelveli,<br/>Tamil Nadu 627011"
-  email = "sindhugas@sindhugas.homes"
-  openingDesc = "Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days."
-  openingHours = "We are open from 8am — 9pm week days."
-  phone = "+(91) 94436 95758"
+  email = "girish@spamcheetah.com"
 
     # Socail icons
   [[params.social]]
-  icon = "ti-facebook"
-  url = "https://www.facebook.com/"
+  icon = "ti-github"
+  url = "https://www.github.com/girish1729"
   weight = 1
   [[params.social]]
   icon = "ti-twitter-alt"
-  url = "https://twitter.com/girish1729"
+  url = "https://twitter.com/intent/follow?screen_name=girish1729"
   weight = 2

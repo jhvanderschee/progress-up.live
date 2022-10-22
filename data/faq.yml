@@ -1,19 +1,19 @@
 ---
 title: "Frequently Asked Questions"
 faq:
-  - question: "Q. What are opening hours?"
+  - question: "Q. What is progress-up?"
     answer: >
-           We are open from 9am to 8pm all days. Sunday till 2pm.
-  - question: "Q. Do you repair induction cooktops?"
+          A HTML5 file API based multi file upload plugin with progress bar
+  - question: "Q. Can you upload any MIME type ?"
     answer: >
-           Yes.
-  - question: "Q. Do you service pressure cooker?"
+          Yes.
+  - question: "Q. Do you support large files?"
     answer: >
-           Yes. All brands.
-  - question: "Q. How long do you take to repair?"
+          Yes. It depends on the backend.
+  - question: "Q. What backend do you use?"
     answer: >
-           Typically half a day.
-  - question: "Q. How many brands do you service?"
+          Express.js with multer middleware.
+  - question: "Q. Can I sponsor this project ?"
     answer: >
-           Around 20 brands. Preeti, Lakshmi and many more.
+          Yes. Please click [here](https://github.com/sponsors/girish1729)
 ---

@@ -2,7 +2,7 @@
 title: "How does file uploading work?"
 date: 2018-11-28T15:15:26+10:00
 featured: true
-featureImage: images/blog/fileupload.webp
+featureImage: fileupload.webp
 draft: false
 weight: 3
 ---

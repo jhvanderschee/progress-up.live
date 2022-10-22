@@ -1,32 +1,10 @@
 ---
-title: "Why Choose us?"
+title: "Why Choose progress-up?"
 subtitle: >
-          We repair all kinds of electrical appliances.
-          Rich experience of 25 years.
+       Only file upload library easy to use with consistent look and feel
 services:
-  - name: "Mixie service"
+  - name: "Easy to customize and brand"
     description: >
-                Mostly serving Pretti mixies.Butterfly, Pigeon and all
-                brands.
+             Very easy to integrate
     icon: "ti-view-grid"
-  - name: "Fan coil rewinding"
-    description: >
-                All popular fan coils can be rewound.
-    icon: "ti-infinite"
-  - name: "Wet Grinder service"
-    description: >
-                Lakshmi and other popular wet grinders are serviced. We also fix the chain into the grinding stone.
-    icon: "ti-help-alt"
-  - name: "Easy access"
-    description: >
-                Store front is right beside the road. You can reach by car or motorcycle or auto rickshaw.
-    icon: "ti-credit-card"
-  - name: "Switchboad cutting"
-    description: >
-              Cutting switchboards according to specification.
-    icon: "ti-lock"
-  - name: "Other appliances"
-    description: >
-                Any appliance that you want to fix simply drop by.
-    icon: "ti-image"
 ---
