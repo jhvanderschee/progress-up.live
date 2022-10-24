@@ -1,0 +1,22 @@
+
+{{ $image := .Page.Resources.GetMatch (.Get "name") }}
+{{ $alt := .Page.Resources.GetMatch (.Get "title") }}
+{{ $image32 := $image.Resize "32x" }}
+{{ $image320 := $image.Resize "320x" }}
+{{ $image800 := $image.Resize "800x" }}
+{{ $image1300 := $image.Resize "1300x" }}
+
+<figure>
+  <picture>
+  <img class="lazy" sizes="100vw" 
+    src="data:image/jpeg;base64,{{ $image32.Content | base64Encode }}" 
+    data-srcset="{{ $image320.RelPermalink }} 320w, {{ $image800.RelPermalink }} 800w, {{ $image1300.RelPermalink }} 1300w"
+    {{ with $image.Title }} alt="{{.}}" {{ end }}
+  >
+  {{ with $image.Title }}
+  </picture>
+  <figcaption>{{.}}</figcaption>
+  {{ end }}
+</figure>
+
+
