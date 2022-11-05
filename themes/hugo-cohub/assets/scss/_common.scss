@@ -140,7 +140,7 @@
   }
 }
 
-.privacy-policy {
+.content {
   background-color: $border-color;
   padding: 150px 0;
   @include mobile {
@@ -170,4 +170,9 @@
       color: $text-color;
     }
   }
+}
+
+iframe {
+	width: 960px;
+	height: 500px;
 }

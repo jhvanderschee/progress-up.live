@@ -1,6 +1,7 @@
 # Progress.up HTML5 File Upload Progress indicator
 
-![Progess.up](https://raw.githubusercontent.com/girish1729/progress.up/main/html5-upload/images/Progress.Up.png)
+
+![Progess.up](https://raw.githubusercontent.com/girish1729/progress.up/main//images/progress-up-logo.svg)
 
 ## What is this?
 
@@ -25,21 +26,33 @@ Demos will be added soon to the above page :point_up: .
 	$ npm add progress-up
 ```
 
-### Angular 13+
 
-```shell
-	$ npm add progress-up/angular
-```
-### Vue 3
+### [Vue.js](https://www.vuejs.org) 
 
-```shell
-	$ npm add progress-up/vue
-```
-### React.js
+[Stackblitz](https://vue-gctrks.stackblitz.io)
 
-```shell
-	$ npm add progress-up/react
-```
+{{<rawhtml>}}
+<iframe src="https://stackblitz.com/edit/vue-gctrks?embed=1&file=src/App.vue"></iframe>
+{{</rawhtml>}}
+
+### [Angular 13](https://angular.io) 
+
+[Stackblitz](https://angular-ivy-pu628h.stackblitz.io)
+
+{{<rawhtml>}}
+<iframe
+src="https://stackblitz.com/edit/angular-ivy-pu628h?embed=1&file=src/app/app.component.ts"></iframe>
+
+{{</rawhtml>}}
+### [React JS](https://reactjs.org) 
+
+[Stackblitz](https://react-ts-iscadj.stackblitz.io)
+
+{{<rawhtml>}}
+<iframe
+src="https://stackblitz.com/edit/react-ts-iscadj?embed=1&file=index.tsx"></iframe>
+{{</rawhtml>}}
+``
 
 ## Detailed instructions
 
@@ -49,18 +62,6 @@ Demos will be added soon to the above page :point_up: .
 - [Angular](https://progress-up.live/angular)
 - [React](https://progress-up.live/react)
  
-
-## Some me the code
-
-{{<rawhtml>}}
-<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fgirish1729%2Fprogress-up%2Fblob%2Fefd9731e390c8d355c3e048245c60a0de6c3a2df%2Fhtml5-upload%2Fjs%2FuploadProgress.js&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-{{</rawhtml>}}
-
-## Screenshots gallery
-
-![Progess.up
-screenshot](https://raw.githubusercontent.com/girish1729/progress.up/main/html5-upload/images/progress-up-html5-upload-capture.png)
-
 ## Why should you care?
 
 If you allow multiple large files upload then a progress indicator is a
@@ -130,15 +131,9 @@ This is a clean way to get progress indicator for file uploads.
 
 ![Progess.up screencast](https://raw.githubusercontent.com/girish1729/progress.up/main/html5-upload/images/progress-up-html5-upload-capture.gif)
 
+
+
 ## Next steps
-
-Plugins for 
-
-- [Vue.js](https://www.vuejs.org) 
-- [Angular 12](https://angular.io) 
-- [React JS](https://reactjs.org) 
-
-are on the way.
 
 - Adding drag and drop and image preview.
 
