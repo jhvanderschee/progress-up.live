@@ -1,12 +1,15 @@
 # Progress.up HTML5 File Upload Progress indicator
 
 
-![Progess.up](https://raw.githubusercontent.com/girish1729/progress.up/main//images/progress-up-logo.svg)
+![Progess.up](https://raw.githubusercontent.com/girish1729/progress.up/main/images/progress-up-logo.svg)
 
 ## What is this?
 
 This is a HTML5 multiple files Upload plugin with progress bar
 indicator.
+
+This supports [tus.io](https://tus.io) as well as Express Multer
+middleware based on Busyboy.
 
 This uses the HTTP File API protocol to show continuous progress.
 
@@ -16,8 +19,6 @@ This uses the HTTP File API protocol to show continuous progress.
 
 [Canonical home page](https://progress-up.live)
 
-Demos will be added soon to the above page :point_up: .
-
 ## Instructions
 
 ### Plain js
@@ -25,34 +26,6 @@ Demos will be added soon to the above page :point_up: .
 ```shell
 	$ npm add progress-up
 ```
-
-
-### [Vue.js](https://www.vuejs.org) 
-
-[Stackblitz](https://vue-gctrks.stackblitz.io)
-
-{{<rawhtml>}}
-<iframe src="https://stackblitz.com/edit/vue-gctrks?embed=1&file=src/App.vue"></iframe>
-{{</rawhtml>}}
-
-### [Angular 13](https://angular.io) 
-
-[Stackblitz](https://angular-ivy-pu628h.stackblitz.io)
-
-{{<rawhtml>}}
-<iframe
-src="https://stackblitz.com/edit/angular-ivy-pu628h?embed=1&file=src/app/app.component.ts"></iframe>
-
-{{</rawhtml>}}
-### [React JS](https://reactjs.org) 
-
-[Stackblitz](https://react-ts-iscadj.stackblitz.io)
-
-{{<rawhtml>}}
-<iframe
-src="https://stackblitz.com/edit/react-ts-iscadj?embed=1&file=index.tsx"></iframe>
-{{</rawhtml>}}
-``
 
 ## Detailed instructions
 
@@ -80,11 +53,10 @@ touch](https://twitter.com/girish1729).
 
 ## How to build and run as plain js
 
-**Instructions or frameworks coming soon**
 
 ```
 $ git clone https://github.com/girish1729/progress.up
-$ cd progress.up/html5-upload
+$ cd progress.up/backend
 $ yarn install
 
 # or
@@ -104,7 +76,7 @@ You may use manual upload.
 
  Drag and drop into the shaded area is not implemented yet.
 
-The uploaded files are present in `html5-upload/uploads` folder.
+The uploaded files are present in `backend/uploads` folder.
 
 ## Backend
 
@@ -119,18 +91,11 @@ This backend is [Node.js HTTP server express.js](https://expressjs.com) with [mu
 We require a backend that accepts `multipart/form-data` as upload
 protocol.
 
-Also the name of the `<input type='file` attribute should `myFiles`.
-
 ## Frontend - the plugin itself
 
 It is using the HTML5 File API.
 
 This is a clean way to get progress indicator for file uploads.
-
-## Screencast of upload
-
-![Progess.up screencast](https://raw.githubusercontent.com/girish1729/progress.up/main/html5-upload/images/progress-up-html5-upload-capture.gif)
-
 
 
 ## Next steps
