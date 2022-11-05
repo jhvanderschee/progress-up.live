@@ -3,7 +3,5 @@ title: "Take a look at some screenshots"
 subtitle: >
        A shot per plugin
 galleryImage:
- - image: "images/gallery/vue.webp"
- - image: "images/gallery/angular.webp"
  - image: "images/gallery/react.webp"
 ---

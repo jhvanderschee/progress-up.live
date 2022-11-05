@@ -24,7 +24,7 @@ This uses the HTTP File API protocol to show continuous progress.
 ### Plain js
 
 ```shell
-	$ npm add progress-up
+	$ npm install progress-up
 ```
 
 ## Detailed instructions
@@ -54,7 +54,7 @@ touch](https://twitter.com/girish1729).
 ## How to build and run as plain js
 
 
-```
+```shell
 $ git clone https://github.com/girish1729/progress.up
 $ cd progress.up/backend
 $ yarn install
@@ -105,7 +105,7 @@ This is a clean way to get progress indicator for file uploads.
 - Options for the plugin (theming, backend endpoint)
 
 If you wish to collaborate or send pull requests 
-please get in touch using my Github profile.
+please [get in touch](https://twitter.com/girish1729) using my Github profile.
 
 If you cannot write code, then buying me a coffee can work as well.
 

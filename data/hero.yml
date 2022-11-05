@@ -1,7 +1,7 @@
 ---
-title : "<h1>Progress.up HTML5
+title : "<h1>Progress-up HTML5
             <br> progress indicator for multiple file upload</h1>"
 subtitle: >
-       Upload multiples files with image preview and progress bar
+       Upload multiples files with progress bar using HTML5 file API
 heroBGimg: "images/hero/hero-bg.webp"
 ---
