@@ -1,69 +1,39 @@
-baseURL = 'https://progress-up.live'
-languageCode = 'en-us'
-paginate = 6
-theme= "hugo-cohub"
-title = 'progress-up | HTML5 multi file upload plugin with progress bar'
- 
-[Menu]
-  # Main Menu
-  [[menu.Main]]
-  name = "Features"
-  url= "#service"
-  weight = 1
-  [[menu.Main]]
-  name = "Gallery"
-  url= "#gallery"
-  weight = 2
-  [[menu.Main]]
-  name = "Live demo"
-  url= "/demo/"
-  weight = 3
-  [[menu.Main]]
-  name = "Docs"
-  url= "#docs"
-  weight = 4
-  [[menu.Main]]
-  name = "React"
-  url= "/react"
-  weight = 5
-  [[menu.Main]]
-  name = "Vue"
-  url= "/vue"
-  weight = 6
-  [[menu.Main]]
-  name = "Angular"
-  url= "/angular"
-  weight = 7
-  [[menu.Main]]
-  name = "FAQ"
-  url= "#faq"
-  weight = 8
-  [[menu.Main]]
-  name = "Contact"
-  url= "/contact/"
-  weight = 9
+# SETUP
+baseurl = "/"
+DefaultContentLanguage = "en"
+publishdir = "public"
+canonifyUrls = "true"
+theme = "hugo-landing-page"
+disableKinds = ["RSS","taxonomy","taxonomyTerm"] 
+
+title = "progress-up - HTML5 file upload progress plugin" 
+
+[author]
+    name = "Girish Venkatachalam"
+    email = "girish@spamcheetah.com"
 
 [params]
-  description = "progress-up - HTML5 file API upload progress bar plugin"
-  images = ["images/hero/hero-bg.webp"]
-  title =  "progress-up - Progress bar file uploader plugin"
+    description = "Progress-up - HTML5 multiple file upload plugin" 
+    images = [] 
+[[params.headermenu]]
+   link = "/vue"
+   title = "Vue"
+[[params.headermenu]]
+   link = "/angular"
+   title = "Angular"
+[[params.headermenu]]
+   link = "/react"
+   title = "React"
+[[params.headermenu]]
+   link = "/docs"
+   title = "Docs"
+[[params.headermenu]]
+   link = "/demo"
+   title = "Live demos"
 
-  aboutPageURL = "about"
-  contactLink = "contact"
-  copyright = "© {year} <a href=\"https://progress-up.live/\" target=\"_blank\">Progress-up Plugin</a>"
-  logo = "images/progress-up-logo.svg"
-  footerlogo = "images/progress-up-logo.svg"
-  footerDescription = "A HTML5 file upload plugin with progress bar"
-
-  [params.address]
-  email = "girish@spamcheetah.com"
-
-    # Socail icons
-  [[params.social]]
-  icon = "ti-github"
-  url = "https://www.github.com/girish1729"
-  weight = 1
-  [[params.social]]
-  icon = "ti-twitter-alt"
-  url = "https://twitter.com/intent/follow?screen_name=girish1729"
-  weight = 2
+[[params.social]]
+    title = "Twitter"
+    url = "https://twitter.com/girish1729" 
+[[params.social]]
+    title = "LinkedIn"
+    url = "https://linkedin.com/in/girishvenkatachalam" 

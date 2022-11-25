@@ -33,4 +33,11 @@ src="https://stackblitz.com/edit/angular-ivy-pu628h?embed=1&file=src/app/app.com
 <iframe
 src="https://stackblitz.com/edit/react-ts-iscadj?embed=1&file=index.tsx"></iframe>
 {{</rawhtml>}}
-`
+
+## Plain js and express backend with multer demo
+
+[Stackblitz](https://stackblitz.com/edit/express-simple-wur94p)
+
+{{<rawhtml>}}
+<iframe src=https://stackblitz.com/edit/express-simple-wur94p?embed=1&file=public/js/uploadProgress.js></iframe>
+{{</rawhtml>}}
