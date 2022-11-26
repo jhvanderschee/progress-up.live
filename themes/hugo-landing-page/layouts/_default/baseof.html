@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}">
+<html class="min-h-screen" lang="en">
 <head>
     {{ block "head" . }}
         {{ partial "head.html" . }}
     {{ end }}
 </head>
-<body id="top" class="font-sans text-gray-800 bg-gray-200">
-    <div id="site"> <!-- real SITE starts here -->
+<body id="top" class="min-h-screen">
         <main>
             {{ block "main" . }}
-                <!-- site content from index.html -->
             {{ end }}
         </main>
+   <div class="sticky top-[100vh]">
         {{ block "footer" . }}
             {{ partial "footer.html" . }}
         {{ end }}
-    </div> <!-- SITE BODY ends here -->
+    </div> 
     {{ partial "js.html" . }}
 </body>
 </html>

@@ -3,8 +3,8 @@ module.exports = {
     enabled: true,
     content: [
       './content/**/*.md',
-      './themes/hugo-landing-page/layouts/**/*.html',
-      // wherever else you use tailwind classes
+      './themes/hugo-landing-page/layouts/partials/**/*.html',
+      './themes/hugo-landing-page/layouts/_default/*.html',
     ],
   },
   target: 'relaxed',

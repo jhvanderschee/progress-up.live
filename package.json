@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "gulp css && hugo server",
-    "deploy": "gulp css && hugo --minify"
+    "start": "postcss styles.css -o static/css/page.css && hugo server"
   },
   "repository": {
     "type": "git",
@@ -13,13 +12,10 @@
   },
   "author": "ttntm",
   "license": "MIT",
-  "homepage": "https://awesome.ttntm.me",
+  "homepage": "https://progress-up.live",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-concat-css": "^3.1.0",
-    "gulp-cssnano": "^2.1.3",
-    "gulp-postcss": "^8.0.0",
-    "tailwindcss": "^1.4.6"
+  "autoprefixer": "*",
+    "postcss-cli": "*",
+    "tailwindcss": "*"
   }
 }
