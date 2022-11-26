@@ -7,4 +7,13 @@ subTitle: >
 
 ## Vue instructions
 
-[Stackblitz](https://vue-gctrks.stackblitz.io)
+
+{{<rawhtml>}}
+<div class="flex justify-center">
+<a href="https://vue-gctrks.stackblitz.io" class="bg-blue-200 rounded shadow-md text-black px-4 py-3 no-underline">Stackblitz </a>
+</div>
+{{</rawhtml>}}
+
+## Configuration
+
+## Instructions

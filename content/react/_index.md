@@ -7,4 +7,10 @@ subTitle: >
 
 ## React.js instructions
 
-[Stackblitz](https://react-ts-iscadj.stackblitz.io)
+{{<rawhtml>}}
+<div class="flex justify-center">
+<a href="https://react-ts-iscadj.stackblitz.io" class="bg-blue-200 rounded shadow-md text-black px-4 py-3 no-underline">Stackblitz </a>
+</div>
+{{</rawhtml>}}
+
+

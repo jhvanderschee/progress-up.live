@@ -1,6 +1,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preload" href="/css/page.css" as="style">
+
+<style>
+.layout-frame {
+                width: 860px;
+                height: 600px;
+		margin-left: 50%;
+                transform: translateX(-50%);
+                transform-origin: 0 0;
+}
+</style>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="{{ with .Description }}{{.}}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
 <meta name="author" content="{{ .Site.Params.author.name }}">
