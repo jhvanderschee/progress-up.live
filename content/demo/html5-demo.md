@@ -7,12 +7,14 @@ subTitle: >
 
 ## Plain js and express backend with multer demo
 
+<!--
 {{<rawhtml>}}
 <div class="w-full">
 <iframe class="layout-frame"
  src=https://stackblitz.com/edit/express-simple-wur94p?embed=1&file=public/js/uploadProgress.js></iframe>
 </div>
 {{</rawhtml>}}
+-->
 
 {{<rawhtml>}}
 <div class="flex justify-center">

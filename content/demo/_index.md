@@ -10,11 +10,13 @@ subTitle: >
 ## [Vue.js](https://www.vuejs.org)  demo
 
 
+<!--
 {{<rawhtml>}}
 <div class="flex justify-center">
 <a href="https://vue-gctrks.stackblitz.io" class="bg-blue-600 rounded shadow-md text-black px-4 py-3 no-underline">Stackblitz </a>
 </div>
 {{</rawhtml>}}
+-->
 
 
 ## [Angular](https://angular.io) demo

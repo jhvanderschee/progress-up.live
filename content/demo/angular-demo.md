@@ -8,14 +8,15 @@ subTitle: >
 
 ## [Angular](https://angular.io) demo
 
+<!--
 {{<rawhtml>}}
 <div class="w-full">
 <iframe
 class="layout-frame"
 src="https://stackblitz.com/edit/angular-ivy-pu628h?embed=1&file=src/app/app.component.ts"></iframe>
-
 </div>
 {{</rawhtml>}}
+-->
 
 {{<rawhtml>}}
 <div class="flex justify-center">

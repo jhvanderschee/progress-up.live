@@ -7,6 +7,7 @@ subTitle: >
 
 ## [React TS](https://reactjs.org) demo
 
+<!--
 {{<rawhtml>}}
 <div class="w-full">
 <iframe
@@ -14,6 +15,7 @@ class="layout-frame"
 src="https://stackblitz.com/edit/react-ts-iscadj?embed=1&file=index.tsx"></iframe>
 </div>
 {{</rawhtml>}}
+-->
 
 {{<rawhtml>}}
 <div class="flex justify-center">

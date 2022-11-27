@@ -15,8 +15,11 @@
   "license": "MIT",
   "homepage": "https://progress-up.live",
   "devDependencies": {
-  "autoprefixer": "*",
+    "autoprefixer": "*",
     "postcss-cli": "*",
     "tailwindcss": "*"
+  },
+  "dependencies": {
+    "lightgallery": "^2.7.0"
   }
 }
