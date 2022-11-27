@@ -2,7 +2,8 @@
 baseurl = "/"
 DefaultContentLanguage = "en"
 publishdir = "public"
-canonifyUrls = "true"
+canonifyUrls = true
+enableEmoji = true
 theme = "hugo-landing-page"
 disableKinds = ["RSS","taxonomy","taxonomyTerm"] 
 

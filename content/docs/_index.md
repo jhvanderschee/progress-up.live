@@ -1,4 +1,4 @@
 ---
-title: "Our Blog"
+title: "Progress-up documentation"
 ---
 
