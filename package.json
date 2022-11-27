@@ -1,6 +1,6 @@
 {
-  "name": "hugo-landing-page",
-  "version": "1.0.0",
+  "name": "progress-up.live",
+  "version": "0.0.20",
   "description": "",
   "main": "index.html",
   "scripts": {
@@ -9,9 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ttntm/hugo-landing-page.git"
+    "url": "git+https://github.com/girish1729/progress-up.git"
   },
-  "author": "ttntm",
+  "author": "girish@spamcheetah.com",
   "license": "MIT",
   "homepage": "https://progress-up.live",
   "devDependencies": {
