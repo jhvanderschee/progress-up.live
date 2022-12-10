@@ -8,6 +8,10 @@
 This is a HTML5 multiple files Upload plugin with progress bar
 indicator.
 
+This uses the [HTTP File API](https://www.w3.org/TR/FileAPI/) to show continuous progress.
+
+
+
 This supports [tus.io](https://tus.io) as well as Express Multer
 middleware based on Busyboy.
 
@@ -108,4 +112,13 @@ If you wish to collaborate or send pull requests
 please [get in touch](https://twitter.com/girish1729) using my Github profile.
 
 If you cannot write code, then buying me a coffee can work as well.
+
+## Alternatives
+
+- [Uppy](https://github.com/transloadit/uppy)
+- [DropIt](https://github.com/ThalKod/DropIt)
+- [Resumable.js](https://github.com/23/resumable.js)
+- [Filepond](https://github.com/pqina/filepond)
+- [Krajee bootstrap file input](https://github.com/kartik-v/bootstrap-fileinput)
+- [Dropzone](https://github.com/dropzone/dropzone)
 

@@ -26,6 +26,9 @@ title = "progress-up - HTML5 file upload progress plugin"
    link = "/react"
    title = "React"
 [[params.headermenu]]
+   link = "/svelte"
+   title = "Svelte"
+[[params.headermenu]]
    link = "/docs"
    title = "Docs"
 [[params.headermenu]]
