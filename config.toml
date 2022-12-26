@@ -1,39 +1,39 @@
-# SETUP
 baseurl = "/"
-DefaultContentLanguage = "en"
+languageCode = "en"
 publishdir = "public"
 canonifyUrls = true
 enableEmoji = true
 theme = "hugo-landing-page"
 disableKinds = ["RSS","taxonomy","taxonomyTerm"] 
-
 title = "progress-up - HTML5 file upload progress plugin" 
 
 [author]
     name = "Girish Venkatachalam"
     email = "girish@spamcheetah.com"
-
 [params]
     description = "Progress-up - HTML5 multiple file upload plugin" 
     images = [] 
 [[params.headermenu]]
-   link = "/vue"
+   link = "/screenshots"
+   title = "Screenshots"
+[[params.headermenu]]
+   link = "/docs/vue-docs"
    title = "Vue"
 [[params.headermenu]]
-   link = "/angular"
+   link = "/docs/angular-docs"
    title = "Angular"
 [[params.headermenu]]
-   link = "/react"
+   link = "/docs/react-docs"
    title = "React"
 [[params.headermenu]]
-   link = "/svelte"
+   link = "/docs/svelte-docs"
    title = "Svelte"
-[[params.headermenu]]
-   link = "/docs"
-   title = "Docs"
 [[params.headermenu]]
    link = "/demo"
    title = "Live demos"
+[[params.headermenu]]
+   link = "/blog"
+   title = "Blogs"
 
 [[params.social]]
     title = "Twitter"

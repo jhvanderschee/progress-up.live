@@ -1,8 +1,5 @@
 # Progress.up HTML5 File Upload Progress indicator
 
-
-![Progess.up](https://raw.githubusercontent.com/girish1729/progress.up/main/images/progress-up-logo.svg)
-
 ## What is this?
 
 This is a HTML5 multiple files Upload plugin with progress bar
@@ -10,34 +7,47 @@ indicator.
 
 This uses the [HTTP File API](https://www.w3.org/TR/FileAPI/) to show continuous progress.
 
-
-
-This supports [tus.io](https://tus.io) as well as Express Multer
-middleware based on Busyboy.
-
 This uses the HTTP File API protocol to show continuous progress.
 
-
 >This is the very first attempt to create a clean no frills upload plugin
->in 100% Javascript. Now available for Angular, Vue and React.
+>in 100% Javascript. Now available for Angular, Vue, Svelte and React.
 
 [Canonical home page](https://progress-up.live)
 
 ## Instructions
 
-### Plain js
+### Angular
 
 ```shell
-	$ npm install progress-up
+	$ npm install progress-up-angular
+```
+
+### React
+
+```shell
+	$ npm install progress-up-react
+```
+
+### Vue
+
+```shell
+	$ npm install progress-up-vue
+```
+
+### Svelte
+
+```shell
+	$ npm install progress-up-svelte
 ```
 
 ## Detailed instructions
 
 - [Developer docs](https://progress-up.live/docs)
 - [Live demo](https://progress-up.live/demo)
-- [Vue.js](https://progress-up.live/vue)
-- [Angular](https://progress-up.live/angular)
-- [React](https://progress-up.live/react)
+- [Vue.js](https://progress-up.live/docs/vue)
+- [Angular](https://progress-up.live/docs/angular)
+- [React](https://progress-up.live/docs/react)
+- [Svelte](https://progress-up.live/docs/svelte)
  
 ## Why should you care?
 
@@ -103,10 +113,6 @@ This is a clean way to get progress indicator for file uploads.
 
 
 ## Next steps
-
-- Adding drag and drop and image preview.
-
-- Options for the plugin (theming, backend endpoint)
 
 If you wish to collaborate or send pull requests 
 please [get in touch](https://twitter.com/girish1729) using my Github profile.

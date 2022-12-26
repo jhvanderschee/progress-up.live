@@ -1,146 +1,17 @@
-<div class="bg-gradient-to-r from-[#ff6b6b] to-[#ffe66d] 
-w-full h-96 text-7xl p-2 text-black mt-20">
-  <div class=" items-center mb-4">
+{{ with site.GetPage "/home" }}
 
-<h1 class="flex justify-center text-7xl leading-tight mb-4 pb-4">	
-	Progress-up
-</h1>
-          <h3 class="flex justify-center text-3xl font-bold ">A HTML5 multiple file
-upload plugin with progress bars. 
-	  </h3>
-<h3 class="text-3xl flex justify-center font-bold ">
-With support for file previews and
-parallel uploads 
-	  </h3>
-  </div>
-  <div class="flex justify-center items-center">
-          <button type="button"
-onclick="location.href='https://github.com/girish1729/progress-up'" class="text-3xl inline-block px-6 py-2.5
- text-black bg-yellow-200 font-medium text-xs leading-tight 
-rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700
-focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800
-active:shadow-lg transition duration-150 ease-in-out">Download</button>
-   </div>
-</div>
+<link rel="stylesheet"  href="/css/normalize.min.css">
 
-<section id="lightgallery" class="overflow-hidden text-gray-700 ">
-<h2 class="flex justify-center text-3xl font-bold ">Screenshots </h2>
-
-  <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
-    <div class="flex flex-wrap -m-1 md:-m-2">
-
-      <div class="flex flex-wrap w-1/3">
-        <div class="w-full p-1 md:p-2 item cursor-pointer" data-src="images/screenshots/progress-up-maintab.png"
->
-          <img alt="gallery" class="block border-black rounded-lg"
-            src="images/screenshots/progress-up-maintab.png">
+<section>
+    <div id="{{ .Title }}" class="w-full flex flex-col justify-center items-center">
+        <div class="self-center w-full sm:w-2/3 xl:w-1/2 px-4 sm:px:0 pt-16">
+            <h2 class="font-bold uppercase tracking-widest text-gray-800 text-2xl mb-4">{{ .Title }}</h2>
+            <div class="font-poppins text-lg">
+                {{ .Content }}
+            </div>
         </div>
-      </div>
-
-      <div class="flex flex-wrap w-1/3">
-        <div class="w-full p-1 md:p-2 item cursor-pointer"
-data-src="images/screenshots/progress-up-setup.png"
->
-          <img alt="gallery" class="block  rounded-lg"
-            src="/images/screenshots/progress-up-setup.png">
-        </div>
-      </div>
-
-      <div class="flex flex-wrap w-1/3">
-        <div class="w-full p-1 md:p-2 item cursor-pointer"
-data-src="images/screenshots/progress-up-help.png" >
-          <img alt="gallery" class="block  rounded-lg"
-            src="images/screenshots/progress-up-help.png">
-        </div>
-      </div>
-
     </div>
- </div>
+
 </section>
 
-<section class="mb-32 text-gray-800 text-center">
-  <h2 class="text-3xl font-bold mb-12 pb-4 text-center">Plugins</h2>
-  <div class="grid lg:grid-cols-3 gap-6 xl:gap-x-12">
-
-      <div class="mb-6 lg:mb-0">
-        <div class="relative block bg-white rounded-lg shadow-lg">
-          <div class="flex">
-            <div
-              class="relative overflow-hidden bg-no-repeat bg-cover relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4"
-              data-mdb-ripple="true" data-mdb-ripple-color="light">
-              <a href="#!">
-                <div
-                  class=" overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-                  style="background-color: rgba(251, 251, 251, 0.15)"></div>
-              </a>
-            </div>
-          </div>
-          <div class="p-6">
-            <h5 class="font-bold text-lg mb-3">Angular plugin</h5>
-            <p class="mb-4 pb-2">
-		Angular plugin for progress-up
-            </p>
-            <a href="/docs/angular-docs" data-mdb-ripple="true" data-mdb-ripple-color="light"
-              class="inline-block px-6 py-2.5 bg-blue-600 text-white
-font-medium text-xs leading-tight rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read
-              more</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="mb-6 lg:mb-0">
-        <div class="relative block bg-white rounded-lg shadow-lg">
-          <div class="flex">
-            <div
-              class="relative overflow-hidden bg-no-repeat bg-cover relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4"
-              data-mdb-ripple="true" data-mdb-ripple-color="light">
-              <a href="#!">
-                <div
-                  class=" overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-                  style="background-color: rgba(251, 251, 251, 0.15)"></div>
-              </a>
-            </div>
-          </div>
-          <div class="p-6">
-            <h5 class="font-bold text-lg mb-3">Vue plugin</h5>
-            <p class="mb-4 pb-2">
-		Vue.js plugin for progress-up
-            </p>
-            <a href="/docs/vue-docs" data-mdb-ripple="true" data-mdb-ripple-color="light"
-              class="inline-block px-6 py-2.5 bg-blue-600 text-white
-font-medium text-xs leading-tight rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read
-              more</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="mb-6 lg:mb-0">
-        <div class="relative block bg-white rounded-lg shadow-lg">
-          <div class="flex">
-            <div
-              class="relative overflow-hidden bg-no-repeat bg-cover relative overflow-hidden bg-no-repeat bg-cover shadow-lg rounded-lg mx-4 -mt-4"
-              data-mdb-ripple="true" data-mdb-ripple-color="light">
-              <a href="#!">
-                <div
-                  class=" w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
-                  style="background-color: rgba(251, 251, 251, 0.15)"></div>
-              </a>
-            </div>
-          </div>
-          <div class="p-6">
-            <h5 class="font-bold text-lg mb-3">React plugin</h5>
-            <p class="mb-4 pb-2">
-		React plugin for progress-up
-            </p>
-            <a href="/docs/react-docs" data-mdb-ripple="true" data-mdb-ripple-color="light"
-              class="inline-block px-6 py-2.5 bg-blue-600 text-white
-font-medium text-xs leading-tight rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Read
-              more</a>
-          </div>
-        </div>
-      </div>
-
-  </div>
-</section>
+{{ end }}

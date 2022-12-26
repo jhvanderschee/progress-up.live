@@ -19,7 +19,7 @@ src="https://stackblitz.com/edit/vitejs-vite-vu9dag"></iframe>
 
 {{<rawhtml>}}
 <div class="flex justify-center">
-<a href="https://stackblitz.com/edit/vitejs-vite-vu9dag" class="bg-blue-200 rounded shadow-md text-black px-4 py-3 no-underline">Stackblitz </a>
+<a target="_blank" href="https://stackblitz.com/edit/vitejs-vite-vu9dag" class="bg-blue-200 rounded shadow-md text-black px-4 py-3 no-underline">Stackblitz </a>
 </div>
 {{</rawhtml>}}
 

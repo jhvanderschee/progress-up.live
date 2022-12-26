@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress.up | HTML5 multiple File Upload with Progress Bar
+indicator</title>
+  <meta description="HTML5 multiple file upload progress bar plugin for
+Vue,js, React and Angular" />
+
+
+<script
+src="https://cdn.jsdelivr.net/npm/tus-js-client@latest/dist/tus.min.js"
+defer></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<script
+src="https://cdn.jsdelivr.net/npm/pdfobject@2.2.8/pdfobject.min.js"
+defer></script>
+<script type="module"
+src="https://cdn.jsdelivr.net/gh/girish1729/progress-up/backend/public/assets/progressBar/loading-bar.js"
+defer></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"
+defer></script>
+  <link rel="stylesheet" href="progress-up.css" />
+</head>
+
+<body class="dark:bg-gray-800 dark:text-white"  onload="initApp()">
+
+<!-- Dark mode controls -->
+<div class="flex justify-end items-center space-x-2 mx-auto relative">
+  <div class="w-14 h-8">
+
+  <label for="dark-mode" class="w-full h-full rounded-full p-1 flex justify-between cursor-pointer">
+    <span class="hidden dark:inline">&#127774;</span>
+    <span class="inline dark:hidden">&#127769; </span>
+  </label>
+
+  <input type="checkbox" id="dark-mode" class='hidden' onchange="document.documentElement.classList.toggle('dark')" />
+  </div>
+</div>
+
+<img src="https://cdn.jsdelivr.net/gh/girish1729/progress-up/images/progress-up-logo.svg" width="100" height="100" alt="Progress.Up HTML5 logo" />
+
+<h2 class="text-5xl leading-tight">  HTML5 Multiple File Upload with Progress Bar 
+</h2>
+
+<h3 class="flex justify-center text-3xl text-gray-100 mb-4 pb-4">
+	HTML5 plugin 
+</h3>
+
+<!-- XXX tabs -->
+<div class="bg-light p7 rounded w-9/12 mx-auto">
+  <!-- Tabs -->
+  <ul id="tabs" class="inline-flex pt-2 px-1 w-full border-b">
+
+    <li class="bg-light px-4 text-dark-800 dark:text-light-800 font-semibold py-2 rounded-t border-t border-r border-l -mb-px">
+	<a id="default-tab" href="#first">File upload</a>
+    </li>
+
+    <li class="px-4 text-dark-800 font-semibold py-2 rounded-t">
+	<a href="#second">Setup</a>
+    </li> 
+
+    <li class="px-4 text-dark-800 font-semibold py-2 rounded-t">
+	<a href="#third">Statistics</a>
+    </li>
+
+    <li class="px-4 text-dark-800 font-semibold py-2 rounded-t">
+	<a href="#fourth">Help</a>
+    </li>
+
+  </ul>
+
+  <!-- Tab Contents -->
+<div id="tab-contents">
+
+ <div id="first" class="p-4">
+<!-- XXX drag drop -->
+	   <h2 id='progress-up-statsArea' class="text-5xl leading-tight border-b"> </h2>
+
+
+	<div id='progress-up-form' class="bg-light p-4 rounded mx-auto">
+    	  <div class="text-gold-400 border border-red-800 border-dashed rounded cursor-pointer">
+	   <form class='flex p-8  justify-center'>
+		<img class="stroke-white dark:bg-white" width="100" height="100"
+src="https://cdn.jsdelivr.net/gh/girish1729/progress-up/backend/public/assets/icons/upload/file-submit.svg" alt="progress-up file submit icon" />
+	       <input id="progress-up-fileInput" type="file" multiple hidden>
+	   </form>
+	   <h2 class="flex justify-center text-dark-500 text-xl font-medium mb-2"> 
+	     Drop files or click to select</h2>
+	  </div>
+	</div>
+
+	<div id='progress-up-configSummary'></div>
+
+	<button id="upButton" onClick="uploadAll()" class="inline-block px-6
+	py-2.5 bg-blue-400 text-dark dark:text-white font-medium text-xs leading-tight
+	rounded shadow-md hover:bg-blue-500 hover:shadow-lg
+	focus:bg-blue-500 focus:shadow-lg focus:outline-none focus:ring-0
+	active:bg-blue-600 active:shadow-lg transition duration-150 ease-in-out
+	opacity-20" disabled>Begin Uploading files
+	</button>
+	
+	<button type="button" onClick="clearAll()" class="inline-block
+px-6 py-2.5 bg-yellow-500 text-dark dark:text-white font-medium text-xs leading-tight rounded shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-700 active:shadow-lg transition duration-150 ease-in-out">
+	 Reset form
+	</button>
+ 	
+
+  </div>
+
+<!-- Second tab -->
+
+  <div id="second" class="hidden p-4">
+	<h2>File upload config</h2>
+	   <form class="w-full max-w-lg">
+	     <div class="flex flex-wrap -mx-3 mb-6">
+	       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+	         <label class="block uppercase tracking-wide text-dark-700 text-xs
+	   font-bold mb-2" for="progress-up-uploadURL">
+	          POST endpoint  
+	         </label>
+	         <input id='progress-up-uploadURL' class="appearance-none block w-full bg-gray-200
+	   text-dark-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight
+	   focus:outline-none focus:bg-light"  type="text"
+	   placeholder="URL to post [cross origin or absolute URL needs CORS]">
+	         <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+	       </div>
+	   
+	       <div class="w-full md:w-1/2 px-3">
+	         <label class="block uppercase tracking-wide text-dark-700 text-xs
+	   font-bold mb-2" for="progress-up-filesName">
+	   	Name of files input field
+	         </label>
+	         <input id='progress-up-filesName' class="appearance-none block w-full bg-gray-200
+	   text-dark-700 border border-gray-200 rounded py-3 px-4 leading-tight
+	   focus:outline-none focus:bg-light focus:border-gray-500"
+	    type="text" placeholder="Name of files input field">
+	       </div>
+	      </div>
+	   
+	     <div class="flex flex-wrap -mx-3 mb-6">
+	       <div class="w-full px-3">
+	         <label class="block uppercase tracking-wide text-dark-700 text-xs
+	   font-bold mb-2" for="progress-up-indicator">
+	           Progress indicator type
+	         </label>
+	         <div class="relative">
+	           <select id='progress-up-indicator' onChange="setIndicator()" class="block appearance-none w-full bg-gray-200 border
+	   border-gray-200 text-dark-700 py-3 px-4 pr-8 rounded leading-tight
+	   focus:outline-none focus:bg-light focus:border-gray-500"
+	   >
+	   			<option default>Line</option>
+	   			<option>Fan</option>
+	   			<option>Bubble</option>
+	   			<option>Energy</option>
+	   			<option>Rainbow</option>
+	   			<option>Stripe</option>
+	   			<option>Text</option>
+	   			<option>Circle</option>
+	           </select>
+	           <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-dark-700">
+	             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+	           </div>
+	         </div>
+	       </div>
+	      </div>
+	
+	      <div class="flex flex-wrap -mx-3 mb-6">
+	       <div class="w-full px-3">
+<label class="relative flex justify-between items-center p-2 text-xl"
+for="fileSizeLimit" >
+<span>File Size Limit (MB)</span>
+  <input id="fileSizeLimit" class='m-6 p-6 form-range'
+type="range"  name="rangeInput" min="10" max="1000"
+step=10 value="0" oninput="sizeLimit.value=rangeInput.value">                      
+<output id="sizeLimit" name="sizeLimit" for="fileSizeLimit">10</output>
+	</div>
+	</div>
+
+	      <div class="flex flex-wrap -mx-3 mb-6">
+	       <div class="w-full px-3">
+
+<label class="relative flex justify-between items-center p-2 text-xl"
+for="sizeToggle" >
+<span id='progress-up-sizeToggle'>Single file limit </span>
+  <input id="sizeToggle" onChange="toggleSizeQ()" type="checkbox" class="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md" />
+  <span class="w-16 h-10 flex items-center flex-shrink-0 ml-4 p-1
+bg-blue-600 rounded-full duration-300 ease-in-out peer-checked:bg-yellow-600 after:w-8 after:h-8 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-6"></span>
+</label>
+	</div>
+	</div>
+
+
+
+	      <div class="flex flex-wrap -mx-3 mb-6">
+	       <div class="w-full px-3">
+	         <label class="block uppercase tracking-wide text-dark-700 text-xs
+	   font-bold mb-2" for="progress-up-indicator">
+	          File type Filters 
+	         </label>
+	         <div class="relative">
+	           <select id='progress-up-filter'
+ class="block appearance-none w-full bg-gray-200 border
+	   border-gray-200 text-dark-700 py-3 px-4 pr-8 rounded leading-tight
+	   focus:outline-none focus:bg-light focus:border-gray-500"
+	   >
+	   			<option default>All</option>
+	   			<option>PDF only</option>
+	   			<option>Image only</option>
+	   			<option>Video only</option>
+	   			<option>Audio only</option>
+	   			<option>Zip only</option>
+	   			<option>Text only</option>
+	           </select>
+	           <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-dark-700">
+	             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+	           </div>
+	         </div>
+	       </div>
+	      </div>
+
+<label class="relative flex justify-between items-center p-2 text-xl"
+for="filterAction" >
+<span id='progress-up-filterLabel'>Allow file type </span>
+  <input id="filterAction" onChange="toggleFilterQ()" type="checkbox" class="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md" />
+  <span class="w-16 h-10 flex items-center flex-shrink-0 ml-4 p-1
+bg-green-600 rounded-full duration-300 ease-in-out peer-checked:bg-red-600 after:w-8 after:h-8 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-6"></span>
+</label>
+
+
+<label class="relative flex justify-between items-center p-2 text-xl"
+for="filterAction" >
+<span>HTTP Auth required</span>
+  <input id="progress-up-authenable" onChange="toggleAuthQ(this)" type="checkbox" class="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md" />
+  <span class="w-16 h-10 flex items-center flex-shrink-0 ml-4 p-1 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-green-400 after:w-8 after:h-8 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-6"></span>
+</label>
+
+	   
+             <div id='progress-up-authsection' class="hidden">
+	        <div class="flex flex-wrap -mx-3 mb-6">
+	          <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+	            <label class="block uppercase tracking-wide
+text-dark-700 text-xs font-bold mb-2" for="progress-up-authtype">
+	              Auth type
+	            </label>
+	            <div class="relative">
+	              <select id='progress-up-authtype' class="block
+appearance-none w-full bg-gray-200 border border-gray-200 text-dark-700
+py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-light focus:border-gray-500">
+	                <option>HTTP basic auth</option>
+	                <option>HTTP digest auth</option>
+	              </select>
+	       
+	              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-dark-700">
+	                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+	              </div>
+	            </div>
+	          </div>
+	      
+	          <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+	            <label class="block uppercase tracking-wide text-dark-700 text-xs
+	      font-bold mb-2" for="progress-up-username">
+	             Username  
+	            </label>
+	            <input id='progress-up-username' class="appearance-none block w-full bg-gray-200
+	      text-dark-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight
+	      focus:outline-none focus:bg-light"  type="text"
+	      placeholder="username">
+	            <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+	          </div>
+	      
+	          <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+	            <label class="block uppercase tracking-wide text-dark-700 text-xs
+	      font-bold mb-2" for="progress-up-pass">
+	      	Password
+	            </label>
+	            <input id='progress-up-pass' class="appearance-none block w-full bg-gray-200
+	      text-dark-700 border border-gray-200 rounded py-3 px-4 leading-tight
+	      focus:outline-none focus:bg-light focus:border-gray-500"
+	       type="password" placeholder="Password">
+	          </div>
+	         </div>
+ 	   </div>
+	   
+	   <button type="button" onClick="saveConfig()" class="inline-block px-6
+	py-2.5 bg-red-600 text-dark dark:text-white font-medium text-xs leading-tight uppercase
+	rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700
+	focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800
+	active:shadow-lg transition duration-150 ease-in-out">Save</button>
+	   
+	   <button type="button" onClick="testEP()" class="inline-block
+px-6 py-2.5 bg-blue-400 text-dark dark:text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-500 hover:shadow-lg focus:bg-blue-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-600 active:shadow-lg transition duration-150 ease-in-out">
+	    Test file upload
+	   </button>
+	   </form>
+  </div>
+
+<!-- Third tab -->
+  <div id="third" class="hidden p-4">
+      <h2> Statistics </h2>
+	<div class="flex flex-col">
+	  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+	    <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+	      <div class="overflow-hidden">
+	        <table class="min-w-full">
+	          <thead class="bg-light border-b">
+	            <tr>
+	              <th scope="col" class="text-sm font-medium text-dark-900 px-6 py-4 text-left">
+	                #
+	              </th>
+	              <th scope="col" class="text-sm font-medium text-dark-900 px-6 py-4 text-left">
+	                Time
+	              </th>
+	              <th scope="col" class="text-sm font-medium text-dark-900 px-6 py-4 text-left">
+	                Status
+	              </th>
+	              <th scope="col" class="text-sm font-medium text-dark-900 px-6 py-4 text-left">
+	                Details
+	              </th>
+	            </tr>
+	          </thead>
+	          <tbody id="progress-up-statsTable">
+
+		   </tbody>
+	        </table>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+   </div>
+
+<!-- Fourth tab -->
+  <div id="fourth" class="hidden p-4">
+
+    <div class="flex flex-col">
+      <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+	 <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+	    <div class="overflow-hidden">
+
+	        <table class="min-w-full">
+	          <thead class="bg-light border-b">
+	            <tr>
+	              <th scope="col" class="text-sm font-medium text-dark-900 px-6 py-4 text-left">
+	               Param
+	              </th>
+	              <th scope="col" class="text-sm font-medium text-dark-900 px-6 py-4 text-left">
+	                Type
+	              </th>
+	              <th scope="col" class="text-sm font-medium text-dark-900 px-6 py-4 text-left">
+	                Description
+	              </th>
+	            </tr>
+	          </thead>
+	          <tbody>
+
+	            <tr class="bg-light-100 border-b">
+	              <td class="px-6 py-4 whitespace-nowrap text-sm
+font-medium text-dark-900">uploadURL</td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> String </td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> The absolute/relative path of HTTP POST
+endpoint </td>
+		   </tr>
+
+
+	            <tr class="bg-light-100 border-b">
+	              <td class="px-6 py-4 whitespace-nowrap text-sm
+font-medium text-dark-900">filesName</td>
+	              <td class="text-sm text-dark-900 font-light px-6 py-4 whitespace-nowrap"> String </td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> The name of files configured in backend </td>
+		   </tr>
+
+		   <tr class="bg-light-100 border-b">
+	              <td class="px-6 py-4 whitespace-nowrap text-sm
+font-medium text-dark-900">Progress type</td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> Select option </td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> The progress indicator one of 
+	   			Fan
+	   			Bubble
+	   			Energy
+	   			Rainbow
+	   			Stripe
+	   			Text
+	   			Circle
+	   			Line
+
+</td>
+		   </tr>
+
+	            <tr class="bg-light-100 border-b">
+	              <td class="px-6 py-4 whitespace-nowrap text-sm
+font-medium text-dark-900">File size limit </td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> Input range (integer) </td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> The max file size in MB</td>
+		   </tr>
+
+	            <tr class="bg-light-100 border-b">
+	              <td class="px-6 py-4 whitespace-nowrap text-sm
+font-medium text-dark-900">File size limit type</td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> Slide toggle </td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> The limit is either per file or total</td>
+		   </tr>
+
+
+	            <tr class="bg-light-100 border-b">
+	              <td class="px-6 py-4 whitespace-nowrap text-sm
+font-medium text-dark-900">File MIME type filter</td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> Select dropdown </td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> The file types allowed/denied
+One of 
+- PDF only
+- Image only
+- Video only
+- Audio only
+- Zip only
+- Text only
+
+</td>
+</tr>
+
+	            <tr class="bg-light-100 border-b">
+	              <td class="px-6 py-4 whitespace-nowrap text-sm
+font-medium text-dark-900">Filter action </td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> Slide toggle </td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> The filter is either allow/deny</td>
+		   </tr>
+
+	            <tr class="bg-light-100 border-b">
+	              <td class="px-6 py-4 whitespace-nowrap text-sm
+font-medium text-dark-900">HTTP auth </td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> Checkbox </td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> Enable it if your backend requires auth</td>
+		   </tr>
+
+	            <tr class="bg-light-100 border-b">
+	              <td class="px-6 py-4 whitespace-nowrap text-sm
+font-medium text-dark-900">HTTP auth type</td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> Select option </td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> Choose one of Digest/Basic HTTP auth </td>
+		   </tr>
+
+	            <tr class="bg-light-100 border-b">
+	              <td class="px-6 py-4 whitespace-nowrap text-sm
+font-medium text-dark-900">Auth username</td>
+	              <td class="text-sm text-dark-900 font-light px-6 py-4 whitespace-nowrap"> String </td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> Username configured in backend for auth </td>
+		   </tr>
+
+	            <tr class="bg-light-100 border-b">
+	              <td class="px-6 py-4 whitespace-nowrap text-sm
+font-medium text-dark-900">Password</td>
+	              <td class="text-sm text-dark-900 font-light px-6 py-4 whitespace-nowrap"> String </td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> Password configured in backend for auth </td>
+		   </tr>
+
+	            <tr class="bg-light-100 border-b">
+	              <td class="px-6 py-4 whitespace-nowrap text-sm
+font-medium text-dark-900">Progress Indicator</td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> Select option</td>
+	              <td class="text-sm text-dark-900 font-light px-6
+py-4 whitespace-nowrap"> See below for possible options </td>
+		   </tr>
+		   </tbody>
+	        </table>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+ </div>
+ </div>
+</div>
+<!-- XXX tabs -->
+
+
+<div id="progress-up-progressArea"> </div>
+<div id="progress-up-errArea"> </div>
+
+<script src="js/uploadProgress.js"></script>
+</body>
+</html>

@@ -20,7 +20,7 @@ src="https://stackblitz.com/edit/angular-ivy-pu628h?embed=1&file=src/app/app.com
 
 {{<rawhtml>}}
 <div class="flex justify-center">
-<a href="https://angular-ivy-pu628h.stackblitz.io" class="bg-blue-200 rounded shadow-md text-black px-4 py-3 no-underline">Stackblitz </a>
+<a target="_blank" href="https://angular-ivy-pu628h.stackblitz.io" class="bg-blue-200 rounded shadow-md text-black px-4 py-3 no-underline">Stackblitz </a>
 </div>
 {{</rawhtml>}}
 

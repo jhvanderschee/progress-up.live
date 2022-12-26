@@ -19,7 +19,7 @@ subTitle: >
 
 {{<rawhtml>}}
 <div class="flex justify-center">
-<a href="https://vue-gctrks.stackblitz.io" class="bg-blue-600 rounded shadow-md text-black px-4 py-3 no-underline">Stackblitz </a>
+<a target="_blank" href="https://vue-gctrks.stackblitz.io" class="bg-blue-600 rounded shadow-md text-black px-4 py-3 no-underline">Stackblitz </a>
 </div>
 {{</rawhtml>}}
 
