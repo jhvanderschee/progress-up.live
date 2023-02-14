@@ -1,3 +1,7 @@
+---
+title: Home
+---
+
 # Progress.up HTML5 File Upload Progress indicator
 
 ## What is this?
