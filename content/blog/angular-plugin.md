@@ -1,7 +1,7 @@
 ---
 title: "Angular plugin for progress-up"
 date: 2018-11-28T15:15:26+10:00
-featureImage: angular.webp
+feature_image: angular.webp
 draft: false
 ---
 

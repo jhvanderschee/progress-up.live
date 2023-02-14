@@ -1,7 +1,7 @@
 ---
 title: "Vue plugin for progress-up"
 date: 2018-11-28T15:15:26+10:00
-featureImage: vue.webp
+feature_image: vue.webp
 draft: false
 weight: 3
 ---

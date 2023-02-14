@@ -1,7 +1,7 @@
 ---
 title: "React plugin for progress-up"
 date: 2018-11-28T15:15:26+10:00
-featureImage: react.webp
+feature_image: react.webp
 draft: false
 weight: 3
 ---

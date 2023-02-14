@@ -1,7 +1,7 @@
 ---
 title: "File type filters for progress-up"
 date: 2018-11-28T15:15:26+10:00
-featureImage: filters.webp
+feature_image: filters.webp
 draft: false
 weight: 3
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Svelte plugin for progress-up"
 date: 2018-11-28T15:15:26+10:00
-featureImage: svelte.webp
+feature_image: svelte.webp
 draft: false
 weight: 3
 ---

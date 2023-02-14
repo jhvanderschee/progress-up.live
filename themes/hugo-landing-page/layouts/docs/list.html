@@ -21,7 +21,7 @@
       {{ range .Paginator.Pages }}
       <div class="col-lg-4">
         <article class="blog-post">
-          <img src="{{ .Params.featureImage | absURL }}" alt="blog-images">
+          <img src="{{ .Params.feature_image | absURL }}" alt="blog-images">
           <div class="blog-content">
             <h3><a href="{{ .Permalink }}">{{ .Title}}</a></h3>
             <p> {{truncate 100 .Summary}} </p>
